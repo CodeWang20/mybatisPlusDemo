@@ -1,0 +1,23 @@
+spring:
+  datasource:
+    username: root
+    password: dong123
+    url: jdbc:mysql://localhost:3306/codewang?suseUnicode=true&useSSL=false&characterEncoding=utf8&serverTimezone=Asia/Shanghai
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    type: com.alibaba.druid.pool.DruidDataSource
+
+logging:
+  level:
+    root: info
+    cn.codewang: debug
+
+mybatis-plus:
+  mapper-locations: classpath*:/mapper/*.xml
+  configuration:
+    map-underscore-to-camel-case: true
+#  //全局逻辑删除
+#  global-config:
+#    db-config:
+#      logic-delete-field: enabled //逻辑删除的字段
+#      logic-delete-value: 0  //已删除数据标识
+#      logic-not-delete-value: 0  //未删除数据标识
